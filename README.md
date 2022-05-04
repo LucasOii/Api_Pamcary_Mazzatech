@@ -12,7 +12,7 @@ Desenvolvido
 2. <a href="#dcm">Desenvolvido as camadas Model, Controller e Repository "pendente (Camada service)"
 3. <a href="#dtb">Desenvolvido o banco de dados, tabela e atributos com mysql 
 4. <a href="#rtm">Realizado testes de metodos de requisição GET, POST, PUT e DELETE  
-5. <a href="#ifwp">Contruindo interface WEB com bootsatrap
+5. <a href="#ifwp">Construção interface WEB com bootsatrap
   
   <h2 id="dep">SpringBoot</h2>
   <h2 id="dcm">Camadas</h2>
