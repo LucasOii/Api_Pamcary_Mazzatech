@@ -1,7 +1,7 @@
 # Api_Pamcary_Mazzatech
 Projeto de avaliação técnica
 
-# Etapas e implementações testes com o Spring
+# Etapas de implementações e testes com o Spring/Mysql/Postman/
 
 Desenvolvido
 
