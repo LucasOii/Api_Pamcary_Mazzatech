@@ -33,22 +33,19 @@ public class UsuarioController {
 		return ResponseEntity.ok(usuarioRepository.findAll());
 		// select * from tb_postagens;
 	}
-	
-	
+		
 	@GetMapping("/{id}")
 	public ResponseEntity <Usuario> getById(@PathVariable Long id){
 		return usuarioRepository.findById(id)
 				.map(resposta -> ResponseEntity.ok(resposta))//200
 				.orElse(ResponseEntity.notFound().build()); //400
-	}
-	
+	}	
 	
 	@GetMapping("/nome/{nome}")
 	public ResponseEntity <List<Usuario>> getByNome(@PathVariable String nome){
 		return ResponseEntity.ok(usuarioRepository.findByNomeContainingIgnoreCase(nome));
 	}
-	
-	
+		
 	@PostMapping
 	public ResponseEntity <Usuario> postUsuario(@Valid @RequestBody Usuario usuario){//@Valid erro 400, sem ele erro 500
 		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(usuario));

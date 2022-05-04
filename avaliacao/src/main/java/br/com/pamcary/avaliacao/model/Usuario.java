@@ -9,10 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -27,11 +27,12 @@ public class Usuario {
 	@Size(min = 5, max = 100, message = "Deve conter no min 5 e max 100")
 	private String nome;
 		
-	@CPF
+	//@CPF
 	@NotBlank(message = "O CPF é obrigatório!")
-	@Size(min = 12, max = 14, message = "O CPF deve conter 11 digitos, ex:000.111.222-12")
+	@Size(min = 11, max = 11, message = "O CPF deve conter 11 digitos, ex:00011122233")
 	private String cpf;
-		
+	
+	@NotNull(message = "A data é obrigatória!")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dataNascimento;
 		
@@ -82,3 +83,4 @@ public class Usuario {
 	}
 	
 }
+
